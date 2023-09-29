@@ -1,7 +1,22 @@
-<div class="jumbotron">
-  <h1 class="display-4">Incredible online store</h1>
+<div class="container-fluid">
+  <div class="jumbotron">
+    <h1 class="display-4">Incredible online store</h1>
+    <div class="container">
+      <article>
+        <p>This application contain a GoodsModule with components:</p>
+        <ul>
+          <li>GoodCenter: has a child component GoodList</li>
+          <li>GoodList: contain a list of goods and this list item should redirect to GoodDetails component</li>
+          <li>GoodDetails: contain data about selected good</li>
+          <li>GoodTemplateDrivenForm: should create, update or delete existing component</li>
+        </ul>
+        <p>Service:</p>
+        <ul>
+          <li>GoodsApiService: manipulate with data in Firebase Cloud Firestore NoSQL database</li>
+        </ul>
+      </article>
+    </div>
+  </div>
   <hr class="my-4">
-  <p class="lead">
-    <a class="btn btn-primary btn-lg" href="#" role="button">Try it now</a>
-  </p>
+  <router-outlet></router-outlet>
 </div>
