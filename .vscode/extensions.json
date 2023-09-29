@@ -1,4 +1,10 @@
 {
-  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=827846
-  "recommendations": ["angular.ng-template"]
+  // My recomended extension
+  "recommendations": [
+    "angular.ng-template",
+    "editorconfig.editorconf",
+    "dbaeumer.vscode-eslint",
+    "ms-vscode.vscode-typescript-next",
+    "esbenp.prettier-vscode"
+  ]
 }
