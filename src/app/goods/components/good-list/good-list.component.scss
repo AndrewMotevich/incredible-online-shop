@@ -2,8 +2,6 @@
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  display: flex;
-  justify-content: center;
 }
 .list-wrapper {
   display: flex;
@@ -13,4 +11,8 @@
 .card{
   background-color: #F4B900;
   color: #fff;
+  &:hover {
+    cursor: pointer;
+    background-color: #ffde21;
+  }
 }
