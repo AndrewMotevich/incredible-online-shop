@@ -3,3 +3,10 @@
   height: 100%;
   box-sizing: border-box;
 }
+.load-input-wrapper{
+  display: flex;
+  flex-direction: column;
+  img {
+    width: 300px;
+  }
+}
