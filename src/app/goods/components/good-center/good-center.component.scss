@@ -1,0 +1,12 @@
+:host{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-family: Incredible, Arial, Helvetica, sans-serif;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}

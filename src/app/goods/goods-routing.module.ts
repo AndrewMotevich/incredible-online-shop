@@ -7,6 +7,7 @@ import { GoodDetailsComponent } from './components/good-details/good-details.com
 import { GoodTemplateDrivenFormComponent } from './components/good-template-driven-form/good-template-driven-form.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: PATHS.GOOD_LIST_PATH.path, pathMatch: 'full' },
   {
     path: PATHS.ROOT_PATH.path,
     component: GoodCenterComponent,

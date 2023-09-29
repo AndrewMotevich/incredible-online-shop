@@ -1,0 +1,16 @@
+:host {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+.list-wrapper {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.card{
+  background-color: #F4B900;
+  color: #fff;
+}

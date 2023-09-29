@@ -1,1 +1,11 @@
-<p>good-list works!</p>
+<div class="list-wrapper">
+  <div *ngFor="let good of goods;" class="card" style="width: 18rem;">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{good.title}}</h5>
+      <p class="card-text">{{good.description}}</p>
+      <p class="card-text">{{good.price}}</p>
+      <a href="#" class="btn btn-primary">Buy</a>
+    </div>
+  </div>
+</div>
