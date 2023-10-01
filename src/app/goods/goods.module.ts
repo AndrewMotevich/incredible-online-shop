@@ -5,7 +5,8 @@ import { GoodListComponent } from './components/good-list/good-list.component';
 import { GoodDetailsComponent } from './components/good-details/good-details.component';
 import { GoodTemplateDrivenFormComponent } from './components/good-template-driven-form/good-template-driven-form.component';
 import { GoodsRoutingModule } from './goods-routing.module';
-import { ConvertToThumbnailDirective } from './directives/convert-to-thumbnail.directive';
+import { ConvertImageToThumbnailDirective } from './directives/convert-to-thumbnail.directive';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,8 +14,8 @@ import { ConvertToThumbnailDirective } from './directives/convert-to-thumbnail.d
     GoodListComponent,
     GoodDetailsComponent,
     GoodTemplateDrivenFormComponent,
-    ConvertToThumbnailDirective,
+    ConvertImageToThumbnailDirective,
   ],
-  imports: [CommonModule, GoodsRoutingModule],
+  imports: [CommonModule, GoodsRoutingModule, FormsModule],
 })
 export class GoodsModule {}

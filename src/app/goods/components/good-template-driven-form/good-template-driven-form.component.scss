@@ -3,6 +3,9 @@
   height: 100%;
   box-sizing: border-box;
 }
+form {
+  max-width: 30rem;
+}
 .load-input-wrapper{
   display: flex;
   flex-direction: column;

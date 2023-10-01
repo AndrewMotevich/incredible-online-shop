@@ -1,9 +1,9 @@
 import { Directive, ElementRef, EventEmitter, HostListener, Output, ChangeDetectionStrategy } from '@angular/core';
 
 @Directive({
-  selector: '[appConvertToThumbnail]'
+  selector: '[convertImageToThumbnail]'
 })
-export class ConvertToThumbnailDirective {
+export class ConvertImageToThumbnailDirective {
   @Output() imageUploaded = new EventEmitter<string>();
   @HostListener('change', ['$event.target.files']) onFileChange(files: FileList) {
     const file = files.item(0);
@@ -41,8 +41,5 @@ export class ConvertToThumbnailDirective {
 
       reader.readAsDataURL(file);
     }
-  }
-
-  constructor(private el: ElementRef) {
   }
 }

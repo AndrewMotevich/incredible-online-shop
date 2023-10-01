@@ -1,38 +1,75 @@
-<form>
-  <div class="form-group load-input-wrapper">
+<form
+  #myForm="ngForm"
+  class="needs-validation"
+  [ngClass]="{'was-validated': myForm.invalid && myForm.submitted}"
+  (ngSubmit)="submit(myForm)">
+
+  <div class="form-group load-input-wrapper mb-3 position-relative">
     <img
-      *ngIf="thumbnailUrl"
       id="thumbnail"
-      [src]="thumbnailUrl"
-      alt="Thumbnail">
+      [src]="good.thumbnail"
+      alt="Thumbnail image">
     <label for="imageInput">Thumbnail:</label>
     <input
+      name="thumbnail"
       type="file"
       id="imageInput"
+      class="form-control"
       accept="image/*"
-      appConvertToThumbnail
+      convertImageToThumbnail
       (imageUploaded)="handleImageUpload($event)">
+    <div class="invalid-tooltip">This field is required!</div>
   </div>
-  <div class="form-group">
+
+  <div class="form-group mb-3 position-relative">
     <label for="titleInput">Title:</label>
     <input
+      name="title"
       type="text"
-      class="form-control"
+      class="form-control has-validation"
       id="titleInput"
-      placeholder="Enter Title">
-    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+      placeholder="Enter Title"
+      minlength="3"
+      required
+      [(ngModel)]="good.title">
+    <div class="invalid-tooltip">
+      This field is required and min length is 3!
+    </div>
   </div>
-  <div class="form-group">
+
+  <div class="form-group mb-3 position-relative">
     <label for="textareaInput">Description:</label>
     <textarea
+      name="description"
       class="form-control"
       id="textareaInput"
       rows="3"
-      placeholder="Enter Description"></textarea>
+      required
+      minlength="3"
+      placeholder="Enter Description"
+      [(ngModel)]="good.description"></textarea>
+    <div class="invalid-tooltip">
+      This field is required and min length is 3!
+    </div>
   </div>
+
+  <div class="form-group mb-3 position-relative">
+    <label for="priceInput">Price:</label>
+    <input
+      name="price"
+      type="number"
+      class="form-control"
+      id="priceInput"
+      required
+      min="0"
+      placeholder="Enter Price"
+      [(ngModel)]="good.price">
+    <div class="invalid-tooltip">This field is required!</div>
+  </div>
+
   <button
     type="submit"
-    class="btn btn-primary">
+    class="btn btn-primary mb-3">
     Submit
   </button>
 </form>

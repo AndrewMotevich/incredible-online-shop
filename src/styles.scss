@@ -6,17 +6,30 @@
   font-family: Incredible;
   src: url('./assets/fonts/Incredibles.ttf');
 }
+
+
 * {
+  --#{$prefix}form-invalid-color: #FbB900;
+  --#{$prefix}form-invalid-border-color: #FbB900;
+  --#{$prefix}success: #FbB900;
+  --#{$prefix}danger: #FbB900;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+.form-control {
+  &:focus {
+    border-color: var(--#{$prefix}form-invalid-border-color);
+    box-shadow: 0 0 0 0.2rem var(--#{$prefix}form-invalid-color);
+  }
+}
+
 body {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
-  background-color: #AA0A00;
+  background-color: #aa0a00;
   color: #fff;
   font-weight: bold;
 }
