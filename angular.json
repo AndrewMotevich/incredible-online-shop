@@ -77,13 +77,13 @@
               "namedChunks": true
             }
           },
-          "defaultConfiguration": "production"
+          "defaultConfiguration": "development"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "online-shop:build:development"
+              "browserTarget": "online-shop:build:production"
             },
             "development": {
               "browserTarget": "online-shop:build:development"
