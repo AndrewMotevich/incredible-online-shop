@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "online-store-8595d": {
+      "hosting": {
+        "online-shop": [
+          "online-store-8595d"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "online-store-8595d"
+  }
+}
