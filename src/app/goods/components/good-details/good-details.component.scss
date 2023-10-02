@@ -3,3 +3,11 @@
   height: 100%;
   box-sizing: border-box;
 }
+.card {
+  max-width: 30rem;
+}
+.button-wrapper{
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+}

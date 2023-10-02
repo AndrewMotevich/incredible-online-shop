@@ -34,7 +34,6 @@ export class ConvertImageToThumbnailDirective {
           ctx?.drawImage(img, 0, 0, width, height);
 
           const thumbnailBase64 = canvas.toDataURL('image/jpeg');
-          console.log(thumbnailBase64);
           this.imageUploaded.emit(thumbnailBase64);
         };
       };

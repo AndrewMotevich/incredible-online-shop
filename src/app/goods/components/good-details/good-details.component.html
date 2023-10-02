@@ -1,9 +1,24 @@
-<div class="card" style="width: 30rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
+<div class="card">
+  <img
+    class="card-img-top"
+    [src]="good?.thumbnail"
+    alt="Card image cap">
   <div class="card-body">
-    <h5 class="card-title">{{good.title}}</h5>
-    <p class="card-text">{{good.description}}</p>
-    <p class="card-text">{{good.price}}</p>
-    <a href="#" class="btn btn-primary">Buy</a>
+    <h5 class="card-title">{{good?.title}}</h5>
+    <p class="card-text">{{good?.description}}</p>
+    <p class="card-text">{{good?.price}}</p>
+    <div class="button-wrapper">
+      <button class="btn btn-primary">Buy</button>
+      <button
+        class="btn btn-primary"
+        [routerLink]="editPath + '/'+ id">
+        Edit
+      </button>
+      <button
+        class="btn btn-danger"
+        (click)="deleteGood(id)">
+        <i class="bi bi-trash"></i>
+      </button>
+    </div>
   </div>
 </div>

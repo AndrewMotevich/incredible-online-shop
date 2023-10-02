@@ -9,15 +9,19 @@ export const GOOD_LIST_PATH: IPath = {
   fullPath: '/list',
 };
 export const GOOD_DETAILS_PATH: IPath = {
-  path: 'details/:id',
-  fullPath: '/details/:id',
+  path: 'details',
+  fullPath: '/details',
 };
 export const GOOD_CREATE_PATH: IPath = {
   path: 'create',
   fullPath: '/create',
 };
 export const GOOD_EDIT_PATH: IPath = {
-  path: 'edit/:id',
-  fullPath: '/edit/:id',
+  path: 'edit',
+  fullPath: '/edit',
 };
 
+export const ID_PATH: IPath = {
+  path: ':id',
+  fullPath: '/:id'
+}

@@ -1,11 +1,24 @@
-<div class="list-wrapper">
-  <div *ngFor="let good of goods;" class="card" style="width: 18rem;">
-    <img class="card-img-top" src="..." alt="Card image cap">
+<button
+type="button"
+class="btn btn-outline-warning"
+[routerLink]="createPath">
+add product
+</button>
+<div class="list-wrapper mb-4">
+  <div
+    *ngFor="let good of goods"
+    class="card"
+    style="width: 18rem;"
+    [routerLink]="detailsPath + '/' + good.id">
+    <div class="card-img-top image">
+      <img
+        [src]="good.thumbnail"
+        alt="Card image cap">
+    </div>
     <div class="card-body">
       <h5 class="card-title">{{good.title}}</h5>
       <p class="card-text">{{good.description}}</p>
-      <p class="card-text">{{good.price}}</p>
-      <a href="#" class="btn btn-primary">Buy</a>
+      <p class="card-text">{{good.price | currency}}</p>
     </div>
   </div>
 </div>

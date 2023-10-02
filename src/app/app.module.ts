@@ -1,19 +1,29 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { getDatabase, provideDatabase } from '@angular/fire/database';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GoodsModule } from './goods/goods.module';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
-import { environment } from '../environments/environment';
-import { provideFirestore,getFirestore } from '@angular/fire/firestore';
-import { provideDatabase,getDatabase } from '@angular/fire/database';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, NgbModule, GoodsModule, provideFirebaseApp(() => initializeApp(environment.firebase)), provideFirestore(() => getFirestore()), provideDatabase(() => getDatabase())],
-  providers: [],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    NgbModule,
+    GoodsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore()),
+    provideDatabase(() => getDatabase()),
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+

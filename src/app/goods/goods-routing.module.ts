@@ -13,9 +13,15 @@ const routes: Routes = [
     component: GoodCenterComponent,
     children: [
       { path: PATHS.GOOD_LIST_PATH.path, component: GoodListComponent },
-      { path: PATHS.GOOD_DETAILS_PATH.path, component: GoodDetailsComponent },
+      {
+        path: PATHS.GOOD_DETAILS_PATH.path + PATHS.ID_PATH.fullPath,
+        component: GoodDetailsComponent,
+      },
       { path: PATHS.GOOD_CREATE_PATH.path, component: GoodTemplateDrivenFormComponent },
-      { path: PATHS.GOOD_EDIT_PATH.path, component: GoodTemplateDrivenFormComponent },
+      {
+        path: PATHS.GOOD_EDIT_PATH.path + PATHS.ID_PATH.fullPath,
+        component: GoodTemplateDrivenFormComponent,
+      },
     ],
   },
 ];
